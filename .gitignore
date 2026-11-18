@@ -1,0 +1,11 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Temporary dumps
+*dump.txt
+
+# OS artifacts
+.DS_Store
+Thumbs.db

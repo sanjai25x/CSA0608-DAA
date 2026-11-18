@@ -11,7 +11,7 @@
 
 This repository hosts coursework, laboratory programs, continuous assessments, and comprehensive capstone project assignments for **CSA0608 – Design and Analysis of Algorithms**.
 
-```
+```text
 CSA0608-DAA/
 │
 ├── CO1_Assignment/                     # Assignment 1: Large-Scale Student Record Retrieval (Tasks 1-12)
@@ -41,6 +41,17 @@ CSA0608-DAA/
 │   ├── Final_Report/                   # Master reports (.docx, .md) following SIMATS Capstone format
 │   └── README.md                       # Comprehensive CO2 assignment documentation
 │
+├── CO3_Assignment/                     # Assignment 3: Divide and Conquer (Pair Work, Q1-Q7)
+│   ├── Q1_MaxMin_Binary_Search/        # Tournament Max-Min (3n/2 - 2) & Lower-Bound Binary Search
+│   ├── Q2_MergeSort_QuickSort/         # Decomposition quality: Stable Merge Sort vs Median-of-3 Introsort
+│   ├── Q3_Karatsuba_Multiplication/    # Fast multiplication Theta(n^1.585), 91.7% mult reduction
+│   ├── Q4_Strassen_Matrix_Multiplication/# Strassen Theta(n^2.807), 73.7% mult reduction on 1024x1024
+│   ├── Q5_Divide_Conquer_Closest_Pair/ # Geometric strip bounding (7 neighbors) & O(n log n) scaling
+│   ├── Q6_Advanced_Divide_Conquer/     # Median of Medians (BFPRT O(n)) & Meet in the Middle (2^(n/2))
+│   ├── Q7_Day4_Design_Challenge/       # KartIQ Retail Platform: 10M orders, 100K live leaderboard
+│   ├── Final_Report/                   # Master reports (.docx, .md) & Student_Contribution_Record.docx
+│   └── README.md                       # Comprehensive CO3 assignment documentation
+│
 ├── CSA0608 CO AND ASSESSMENT/          # Course Outcome briefs, assignments, and case studies
 └── CSA0608 LAB PROGRAMS/               # Laboratory topic implementations & manuals
 ```
@@ -66,6 +77,20 @@ CSA0608-DAA/
   - **Q6 0/1 Knapsack:** Proved greedy heuristic suboptimal (+10 value); determined $n_{\text{max}} = 22$ under a 5.0 s dispatch SLA.
   - **Q7 Day-4 Challenge:** Adaptive-Axis Sweep-Window Redesign achieves a **$384.9\times$ speedup** at $n = 4,000$ drones ($2.12$ ms latency, $23\times$ below SLA).
 
+### 3. CO3 Assignment: Divide and Conquer Algorithms (Pair Work)
+- **Directory:** [`CO3_Assignment/`](CO3_Assignment/)
+- **Master Report (.docx):** [`CO3_Assignment/Final_Report/CO3_Assignment_Report.docx`](CO3_Assignment/Final_Report/CO3_Assignment_Report.docx)
+- **Contribution Record (.docx):** [`CO3_Assignment/Final_Report/Student_Contribution_Record.docx`](CO3_Assignment/Final_Report/Student_Contribution_Record.docx)
+- **Pair Team:** Student A: SANJAI S (192511018) | Student B: PAIR PARTNER (192511025)
+- **Highlights:**
+  - **Q1 Max-Min & Binary Search:** Tournament method achieves exact $\frac{3n}{2} - 2$ comparisons (**25.00% reduction** over linear); Lower-Bound Binary Search resolves duplicates in $\le 24$ steps.
+  - **Q2 Decomposition Quality:** Quick Sort first-pivot experiences catastrophic quadratic degradation on sorted data ($1.99\text{M}$ comparisons, depth 1999); solved by Median-of-Three Introsort ($20,892$ comparisons, depth 10).
+  - **Q3 Karatsuba Multiplication:** 3-multiplication recurrence $\Theta(n^{1.585})$ saves **91.69%** scalar multiplications for 1024-digit integers.
+  - **Q4 Strassen Matrix Multiplication:** 7-product formulation $\Theta(n^{2.8074})$ eliminates **73.69%** scalar multiplications on $1024 \times 1024$ recommendation matrices.
+  - **Q5 Closest Pair:** Geometric circle packing bounds strip neighbors to $\le 7$ points, providing $O(n \log n)$ scaling and a **99.88% reduction** in distance evaluations.
+  - **Q6 Advanced D&C:** Deterministic linear-time BFPRT selection ($O(n)$) and Meet-in-the-Middle subset sum yielding a **$524,288\times$ state space reduction**.
+  - **Q7 Day-4 Challenge (KartIQ Engine):** Synthesized multi-pipeline D&C engine handling 10M orders, 100K live leaderboards, instantaneous retrieval, and recommendation matrix updates.
+
 ---
 
 ## 💻 Quick Start & Verification
@@ -75,4 +100,7 @@ python CO1_Assignment/Task_8_Implementation_Testing/Source_Code/benchmark.py
 
 # Run CO2 Day-4 Closest Pair Redesign validation
 python CO2_Assignment/Q7_Day4_Design_Challenge/Implementation_Code/q7_closest_pair_redesign.py
+
+# Run CO3 Day-4 KartIQ Divide-and-Conquer Engine validation
+python CO3_Assignment/Q7_Day4_Design_Challenge/Implementation_Code/q7_day4_challenge.py
 ```
