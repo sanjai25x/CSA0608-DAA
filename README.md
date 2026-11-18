@@ -52,6 +52,17 @@ CSA0608-DAA/
 │   ├── Final_Report/                   # Master reports (.docx, .md) & Student_Contribution_Record.docx
 │   └── README.md                       # Comprehensive CO3 assignment documentation
 │
+├── CO4_Assignment_4A/                  # Assignment 4A: Algorithmic Design Through Pseudocode (CO4)
+│   ├── Source_Code/
+│   │   ├── Task_1/                     # Fractional Knapsack: 6 Deficiencies Diagnosed & Repaired
+│   │   ├── Task_2/                     # Job Sequencing with Deadlines: Latest-Slot Greedy & Challenge ($210)
+│   │   ├── Task_3/                     # 0/1 Knapsack DP: Recurrence, Table Desk-Check & Backtracking ({Q, R})
+│   │   ├── Task_4/                     # Word Break Forensics: Prefix-Chaining Defect & Surgical Fix
+│   │   ├── Task_5/                     # Shortest Paths: Dijkstra, Bellman-Ford & Floyd-Warshall APSP
+│   │   └── Task_6/                     # Day-4 Design Challenge: Energy-Aware Scheduling DP (Value = 200)
+│   ├── Report/                         # PDF Report (CO4_Assignment_4A_Report.pdf), DOCX & MD Reports
+│   └── README.md                       # Comprehensive CO4 assignment documentation
+│
 ├── CSA0608 CO AND ASSESSMENT/          # Course Outcome briefs, assignments, and case studies
 └── CSA0608 LAB PROGRAMS/               # Laboratory topic implementations & manuals
 ```
@@ -91,6 +102,18 @@ CSA0608-DAA/
   - **Q6 Advanced D&C:** Deterministic linear-time BFPRT selection ($O(n)$) and Meet-in-the-Middle subset sum yielding a **$524,288\times$ state space reduction**.
   - **Q7 Day-4 Challenge (KartIQ Engine):** Synthesized multi-pipeline D&C engine handling 10M orders, 100K live leaderboards, instantaneous retrieval, and recommendation matrix updates.
 
+### 4. CO4 Assignment 4A: Algorithmic Design Through Pseudocode
+- **Directory:** [`CO4_Assignment_4A/`](CO4_Assignment_4A/)
+- **Official Submission PDF:** [`CO4_Assignment_4A/Report/CO4_Assignment_4A_Report.pdf`](CO4_Assignment_4A/Report/CO4_Assignment_4A_Report.pdf)
+- **Master Report (.docx):** [`CO4_Assignment_4A/Report/CO4_Assignment_4A_Report.docx`](CO4_Assignment_4A/Report/CO4_Assignment_4A_Report.docx)
+- **Highlights:**
+  - **Task 1 Fractional Knapsack:** Diagnosed 6 deficiencies in junior engineer's logic; repaired with $v_i/w_i$ greedy density sorting and fractional division.
+  - **Task 2 Job Sequencing:** Modeled requirements, proved latest-slot greedy rule; desk-checked 5 jobs ($\text{Profit} = \$180$); verified adversarial modification where Job B displaces Job C ($\text{Profit} = \$210$).
+  - **Task 3 0/1 Knapsack DP:** Derived state $DP[i][w]$ and recurrence; desk-checked on 4 items ($W=7$ kg) selecting $\{Q, R\}$ ($\text{Value} = \$45$); proved row dependency order.
+  - **Task 4 Word Break Forensics:** Pinpointed missing prefix segmentability check; crafted adversarial counterexample `"abcat"` with `{"cat"}` causing false positive; provided minimal fix and regression test.
+  - **Task 5 Shortest Paths:** Dijkstra non-negative design ($A:0, B:4, C:6, D:7, E:10$); analyzed negative edge greedy failure; formulated Bellman-Ford repeated relaxation and Floyd-Warshall APSP intermediate state transition.
+  - **Task 6 Day-4 Design Challenge:** Weighted Interval Scheduling for cloud server energy savings. Formulated binary search for $p(i)$ and DP state $DP[i] = \max(DP[i-1], v_i + DP[p(i)])$. Selected $\{J2, J5, J7, J8\}$ ($\text{Energy Saved} = 200$); proved complete immunity against adversarial greedy traps.
+
 ---
 
 ## 💻 Quick Start & Verification
@@ -103,4 +126,7 @@ python CO2_Assignment/Q7_Day4_Design_Challenge/Implementation_Code/q7_closest_pa
 
 # Run CO3 Day-4 KartIQ Divide-and-Conquer Engine validation
 python CO3_Assignment/Q7_Day4_Design_Challenge/Implementation_Code/q7_day4_challenge.py
+
+# Run CO4 Day-4 Energy-Aware Cloud Scheduling validation
+python CO4_Assignment_4A/Source_Code/Task_6/task6_energy_aware_scheduling.py
 ```
