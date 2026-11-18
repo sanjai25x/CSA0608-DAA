@@ -63,70 +63,42 @@ CSA0608-DAA/
 │   ├── Report/                         # PDF Report (CO4_Assignment_4A_Report.pdf), DOCX & MD Reports
 │   └── README.md                       # Comprehensive CO4 assignment documentation
 │
+├── CO4_Assignment_4B/                  # Assignment 4B: Algorithm Engineering: Implement, Test, Debug & Optimise
+│   ├── Source_Code/
+│   │   ├── Task_1/                     # Word Wrap DP Layout Engine: Cubic Penalty, Multi-Width & Guards
+│   │   ├── Task_2/                     # Fractional vs 0/1 Knapsack: Adversarial Commitment Trap & FPTAS
+│   │   ├── Task_3/                     # Network Routing Engine: Dijkstra Failure, Bellman-Ford & Floyd-Warshall
+│   │   ├── Task_4/                     # Assembly Line Scheduling DP: Stay vs Transfer Trace & Disruption
+│   │   ├── Task_5/                     # Kruskal vs Prim vs Boruvka MST: Stressed Multiple MST Proof
+│   │   └── Task_6/                     # Held-Karp TSP DP: Bitmask Engine, Brute Force Validation & Benchmark
+│   ├── Report/                         # Official PDF (CO4_Assignment_4B_Report.pdf), DOCX & MD Reports
+│   └── README.md                       # Comprehensive CO4 Assignment 4B documentation
+│
 ├── CSA0608 CO AND ASSESSMENT/          # Course Outcome briefs, assignments, and case studies
 └── CSA0608 LAB PROGRAMS/               # Laboratory topic implementations & manuals
 ```
 
 ---
 
-## 🏆 Featured Submissions
+## 🎯 Course Outcomes & Assignments
 
-### 1. CO1 Assignment: Search Strategy for Student Records
-- **Directory:** [`CO1_Assignment/`](CO1_Assignment/)
-- **Master Report (.docx):** [`CO1_Assignment/Report/Documentation/CSA0608_CO1_Assignment_Report.docx`](CO1_Assignment/Report/Documentation/CSA0608_CO1_Assignment_Report.docx)
-- **Highlights:** Evaluated $1\,000 \to 1\,000\,000$ records. Binary Search demonstrated **20 comparisons** vs Linear Search's $1\,000\,000$ comparisons ($50\,000\times$ speedup). Day-4 Challenge modified to a Hybrid In-Memory Hash Index sustaining $50\,000$ requests/hour in $0.17$ s CPU time.
-
-### 2. CO2 Assignment: Brute-Force and Exhaustive Search
-- **Directory:** [`CO2_Assignment/`](CO2_Assignment/)
-- **Master Report (.docx):** [`CO2_Assignment/Final_Report/CO2_Assignment_Report.docx`](CO2_Assignment/Final_Report/CO2_Assignment_Report.docx)
-- **Highlights:**
-  - **Q1 Sorting:** Insertion Sort cuts comparisons by 94.8% and runs $10.4\times$ faster on nearly sorted streams.
-  - **Q2 Tool Tracking:** 20-facility expansion causes a $398.94\times$ comparison surge; resolved via Hash Table index.
-  - **Q3 String Matching:** Fixed dimensions ($n=10,000, m=20$) show a $20.0\times$ work variance ($9,981 \to 199,620$ comps).
-  - **Q4 Closest Pair:** Brute force breaches the 50 ms SLA at $n = 1,000$ drones ($805$ ms at $n = 4,000$).
-  - **Q5 Convex Hull:** Derived from the half-plane separation principle; eliminates collinear subsegments and near-edge traps.
-  - **Q6 0/1 Knapsack:** Proved greedy heuristic suboptimal (+10 value); determined $n_{\text{max}} = 22$ under a 5.0 s dispatch SLA.
-  - **Q7 Day-4 Challenge:** Adaptive-Axis Sweep-Window Redesign achieves a **$384.9\times$ speedup** at $n = 4,000$ drones ($2.12$ ms latency, $23\times$ below SLA).
-
-### 3. CO3 Assignment: Divide and Conquer Algorithms (Pair Work)
-- **Directory:** [`CO3_Assignment/`](CO3_Assignment/)
-- **Master Report (.docx):** [`CO3_Assignment/Final_Report/CO3_Assignment_Report.docx`](CO3_Assignment/Final_Report/CO3_Assignment_Report.docx)
-- **Contribution Record (.docx):** [`CO3_Assignment/Final_Report/Student_Contribution_Record.docx`](CO3_Assignment/Final_Report/Student_Contribution_Record.docx)
-- **Pair Team:** Student A: SANJAI S (192511018) | Student B: PAIR PARTNER (192511025)
-- **Highlights:**
-  - **Q1 Max-Min & Binary Search:** Tournament method achieves exact $\frac{3n}{2} - 2$ comparisons (**25.00% reduction** over linear); Lower-Bound Binary Search resolves duplicates in $\le 24$ steps.
-  - **Q2 Decomposition Quality:** Quick Sort first-pivot experiences catastrophic quadratic degradation on sorted data ($1.99\text{M}$ comparisons, depth 1999); solved by Median-of-Three Introsort ($20,892$ comparisons, depth 10).
-  - **Q3 Karatsuba Multiplication:** 3-multiplication recurrence $\Theta(n^{1.585})$ saves **91.69%** scalar multiplications for 1024-digit integers.
-  - **Q4 Strassen Matrix Multiplication:** 7-product formulation $\Theta(n^{2.8074})$ eliminates **73.69%** scalar multiplications on $1024 \times 1024$ recommendation matrices.
-  - **Q5 Closest Pair:** Geometric circle packing bounds strip neighbors to $\le 7$ points, providing $O(n \log n)$ scaling and a **99.88% reduction** in distance evaluations.
-  - **Q6 Advanced D&C:** Deterministic linear-time BFPRT selection ($O(n)$) and Meet-in-the-Middle subset sum yielding a **$524,288\times$ state space reduction**.
-  - **Q7 Day-4 Challenge (KartIQ Engine):** Synthesized multi-pipeline D&C engine handling 10M orders, 100K live leaderboards, instantaneous retrieval, and recommendation matrix updates.
-
-### 4. CO4 Assignment 4A: Algorithmic Design Through Pseudocode
-- **Directory:** [`CO4_Assignment_4A/`](CO4_Assignment_4A/)
-- **Official Submission PDF:** [`CO4_Assignment_4A/Report/CO4_Assignment_4A_Report.pdf`](CO4_Assignment_4A/Report/CO4_Assignment_4A_Report.pdf)
-- **Master Report (.docx):** [`CO4_Assignment_4A/Report/CO4_Assignment_4A_Report.docx`](CO4_Assignment_4A/Report/CO4_Assignment_4A_Report.docx)
-- **Highlights:**
-  - **Task 1 Fractional Knapsack:** Diagnosed 6 deficiencies in junior engineer's logic; repaired with $v_i/w_i$ greedy density sorting and fractional division.
-  - **Task 2 Job Sequencing:** Modeled requirements, proved latest-slot greedy rule; desk-checked 5 jobs ($\text{Profit} = \$180$); verified adversarial modification where Job B displaces Job C ($\text{Profit} = \$210$).
-  - **Task 3 0/1 Knapsack DP:** Derived state $DP[i][w]$ and recurrence; desk-checked on 4 items ($W=7$ kg) selecting $\{Q, R\}$ ($\text{Value} = \$45$); proved row dependency order.
-  - **Task 4 Word Break Forensics:** Pinpointed missing prefix segmentability check; crafted adversarial counterexample `"abcat"` with `{"cat"}` causing false positive; provided minimal fix and regression test.
-  - **Task 5 Shortest Paths:** Dijkstra non-negative design ($A:0, B:4, C:6, D:7, E:10$); analyzed negative edge greedy failure; formulated Bellman-Ford repeated relaxation and Floyd-Warshall APSP intermediate state transition.
-  - **Task 6 Day-4 Design Challenge:** Weighted Interval Scheduling for cloud server energy savings. Formulated binary search for $p(i)$ and DP state $DP[i] = \max(DP[i-1], v_i + DP[p(i)])$. Selected $\{J2, J5, J7, J8\}$ ($\text{Energy Saved} = 200$); proved complete immunity against adversarial greedy traps.
+| Assignment | Course Outcome | Focus & Paradigm | Status | Key Deliverables |
+| :--- | :--- | :--- | :---: | :--- |
+| **CO1 Assignment** | **CO1** | Mathematical Analysis of Algorithms & Recurrences | **Completed** | Full derivation, experimental tests on 1M records, Design Challenge, PDF/Word/MD reports |
+| **CO2 Assignment** | **CO2** | Brute Force, Exhaustive Search, Adaptivity & Convex Hull | **Completed** | 7 Questions, Sweepline optimization, 384.9x speedup, PDF/Word/MD reports |
+| **CO3 Assignment** | **CO3** | Divide and Conquer Paradigms & Lower Bounds | **Completed** | Karatsuba, Strassen, Closest Pair, Median-of-Medians, KartIQ Day-4 System, PDF/Word/MD |
+| **CO4 Assignment 4A** | **CO4 (Part I)** | Algorithmic Design Through Pseudocode | **Completed** | Diagnostic review, job sequencing, knapsack DP, word break forensics, energy-aware DP, PDF/Word/MD |
+| **CO4 Assignment 4B** | **CO4 (Part II)** | Algorithm Engineering: Implement, Test, Debug & Optimise | **Completed** | Word wrap DP, Knapsack trap, Routing engine, Assembly line, MST triad, Held-Karp TSP, PDF/Word/MD |
 
 ---
 
-## 💻 Quick Start & Verification
-```powershell
-# Run CO1 benchmarks
-python CO1_Assignment/Task_8_Implementation_Testing/Source_Code/benchmark.py
+## 🚀 Key Coursework Achievements
 
-# Run CO2 Day-4 Closest Pair Redesign validation
-python CO2_Assignment/Q7_Day4_Design_Challenge/Implementation_Code/q7_closest_pair_redesign.py
+1. **Large-Scale Asymptotic Modeling:** Mathematically evaluated and benchmarked binary search across $10^6$ records, proving $O(\log n)$ scalability under high-throughput request rates.
+2. **Brute Force & Algorithmic Adaptivity:** Diagnosed worst-case bottlenecks across sorting, searching, and geometric algorithms, redesigning the Day-4 nearest-neighbor radar with a 384.9x faster adaptive-axis window.
+3. **Advanced Divide and Conquer:** Implemented sub-cubic matrix multiplication (Strassen $O(n^{2.807})$), fast integer arithmetic (Karatsuba $O(n^{1.585})$), linear-time median selection ($O(n)$ BFPRT), and sub-millisecond closest pair detection.
+4. **Algorithmic Design Through Pseudocode:** Identified and repaired anti-patterns in greedy and dynamic programming formulations, applying formal verification, invariant modeling, and state-transition desk-checks.
+5. **Algorithm Engineering & Adversarial Verification:** Engineered production-grade implementations of Word Wrap DP, Fractional vs 0/1 Knapsack with an adversarial counterexample exposing the greedy commitment trap, robust multi-protocol routing with negative cycle detection, assembly line scheduling under mechanical disruptions, multiple MST verification across Kruskal/Prim/Borůvka, and Held-Karp bitmask TSP with brute-force validation and growth benchmarking.
 
-# Run CO3 Day-4 KartIQ Divide-and-Conquer Engine validation
-python CO3_Assignment/Q7_Day4_Design_Challenge/Implementation_Code/q7_day4_challenge.py
-
-# Run CO4 Day-4 Energy-Aware Cloud Scheduling validation
-python CO4_Assignment_4A/Source_Code/Task_6/task6_energy_aware_scheduling.py
-```
+---
+*Maintained by Sanjai S (192511018) | Department of Computer Science and Engineering, SIMATS Engineering.*
