@@ -1,0 +1,66 @@
+{
+    "benchmarks": {
+        "1000": {
+            "n": 1000,
+            "linear_comps": 1000,
+            "linear_time_sec": 5.218e-05,
+            "iterative_binary_comps": 10,
+            "iterative_binary_time_sec": 2.18e-06,
+            "recursive_binary_comps": 10,
+            "recursive_binary_time_sec": 2.8199999999999997e-06,
+            "hash_lookup_time_sec": 8e-07,
+            "hash_build_time_sec": 0.0001646,
+            "sort_time_sec": 8.29e-05
+        },
+        "10000": {
+            "n": 10000,
+            "linear_comps": 10000,
+            "linear_time_sec": 0.00036506,
+            "iterative_binary_comps": 14,
+            "iterative_binary_time_sec": 2.2799999999999998e-06,
+            "recursive_binary_comps": 14,
+            "recursive_binary_time_sec": 2.8e-06,
+            "hash_lookup_time_sec": 1e-06,
+            "hash_build_time_sec": 0.001149,
+            "sort_time_sec": 0.0011871
+        },
+        "100000": {
+            "n": 100000,
+            "linear_comps": 100000,
+            "linear_time_sec": 0.0034977000000000003,
+            "iterative_binary_comps": 17,
+            "iterative_binary_time_sec": 2.724e-05,
+            "recursive_binary_comps": 17,
+            "recursive_binary_time_sec": 4.04e-06,
+            "hash_lookup_time_sec": 1.4e-06,
+            "hash_build_time_sec": 0.0130414,
+            "sort_time_sec": 0.0122966
+        },
+        "1000000": {
+            "n": 1000000,
+            "linear_comps": 1000000,
+            "linear_time_sec": 0.03189313333333333,
+            "iterative_binary_comps": 20,
+            "iterative_binary_time_sec": 7.000000000000001e-06,
+            "recursive_binary_comps": 20,
+            "recursive_binary_time_sec": 5.833333333333333e-06,
+            "hash_lookup_time_sec": 3.4e-06,
+            "hash_build_time_sec": 0.131843,
+            "sort_time_sec": 0.2947572
+        }
+    },
+    "day4_challenge": {
+        "dataset_size": 1000000,
+        "queries_per_hour": 50000,
+        "linear_avg_comps_per_hour": 25000000000.0,
+        "linear_worst_comps_per_hour": 50000000000,
+        "linear_estimated_time_sec": 797.3283333333333,
+        "binary_comps_per_hour": 1000000,
+        "binary_estimated_time_sec": 0.35000000000000003,
+        "hash_comps_per_hour": 50000,
+        "hash_estimated_time_sec": 0.17,
+        "hash_build_time_sec": 0.131843,
+        "daily_update_batch_size": 1000,
+        "daily_update_insertion_time_sec": 0.0015
+    }
+}
